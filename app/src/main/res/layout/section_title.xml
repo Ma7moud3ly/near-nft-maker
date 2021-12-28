@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp">
+
+        <TextView
+            style="@style/label.title"
+            android:layout_gravity="start|center"
+            android:text='@{title,default="title"}'
+            android:textColor="@color/colorSecondary" />
+
+        <Button
+            android:id="@+id/see_all"
+            style="@style/button_text"
+            android:layout_gravity="end|center"
+            android:text="See All" />
+
+    </FrameLayout>
+
+</layout>

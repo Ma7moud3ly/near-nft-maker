@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="progress"
+            type="Integer" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="showProgress"
+            type="Boolean" />
+
+        <variable
+            name="showSearch"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@{title,default="Title"}'
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/header_exit"
+            app:layout_constraintEnd_toStartOf="@id/header_exit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/header_exit" />
+
+        <ImageView
+            android:id="@+id/header_exit"
+            style="@style/ripple"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/circle"
+            android:clickable="true"
+            android:padding="3dp"
+            android:src="@drawable/close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/header_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ProgressBar
+            android:id="@+id/header_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:progress="@{progress,default=30}"
+            android:progressTint="@color/colorPrimary"
+            android:visibility="@{showProgress?View.VISIBLE:View.GONE,default=gone}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_exit" />
+
+
+        <SearchView
+            android:id="@+id/header_search"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/oval"
+            android:iconifiedByDefault="false"
+            android:queryHint="@string/search_hint"
+            android:visibility="@{showSearch?View.VISIBLE:View.GONE,default=gone}"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toStartOf="@id/header_import"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_exit" />
+
+        <TextView
+            android:id="@+id/header_import"
+            style="@style/button_text"
+            android:layout_marginEnd="10dp"
+            android:text="Import"
+            android:visibility="@{showSearch?View.VISIBLE:View.GONE,default=gone}"
+            app:layout_constraintBottom_toBottomOf="@id/header_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/header_search"
+            app:layout_constraintTop_toTopOf="@id/header_search" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

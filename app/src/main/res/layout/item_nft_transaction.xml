@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/transaction_image"
+            android:layout_width="@dimen/user_avatar_wh"
+            android:layout_height="@dimen/user_avatar_wh"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/arrow"
+            android:rotation="-45"
+            android:background="@color/whiteDark"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/transaction_number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="start|bottom"
+            android:paddingStart="10dp"
+            android:text="#1525"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@id/transaction_recipient"
+            app:layout_constraintEnd_toStartOf="@id/transaction_date"
+            app:layout_constraintStart_toEndOf="@id/transaction_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/transaction_recipient"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="start|top"
+            android:paddingStart="10dp"
+            android:text="Sent To John_doe"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorDisabled"
+            app:layout_constraintBottom_toBottomOf="@id/transaction_image"
+            app:layout_constraintEnd_toStartOf="@id/transaction_date"
+            app:layout_constraintStart_toEndOf="@id/transaction_image"
+            app:layout_constraintTop_toBottomOf="@id/transaction_number" />
+
+        <TextView
+            android:id="@+id/transaction_date"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingStart="10dp"
+            android:gravity="center"
+            android:text="5 days ago"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/colorDisabled"
+            app:layout_constraintBottom_toBottomOf="@id/transaction_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/transaction_image" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

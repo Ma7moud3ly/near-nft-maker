@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Near</string>
+    <string name="home_phone_hint">Ex. (373) 378 8383</string>
+    <string name="home_wallet_name_hint">walletName.near</string>
+
+    <string name="home_agreement">by clicking continue you must agree to near labs</string>
+    <string name="home_agreement_and"> And </string>
+    <string name="home_agreement_terms">Terms &amp; Conditions</string>
+    <string name="home_agreement_policy">Privacy Policy</string>
+
+    <string name="home_login">Login</string>
+    <string name="home_get_started">Get Started</string>
+    <string name="home_have_account">Already have Near Account</string>
+    <string name="home_email">Email</string>
+    <string name="home_phone">Phone</string>
+
+    <string name="verification">Verification</string>
+    <string name="verification_to_email">We\'ve sent a 6-digit verification code to the email address johndoe@gmail.com</string>
+    <string name="verification_to_phone">We\'ve sent a 6-digit verification code to your phone</string>
+    <string name="verification_enter_code">Enter verification code</string>
+    <string name="verification_continue">Continue</string>
+    <string name="verification_didnt_receive_code">Didn\'t receive your code?</string>
+    <string name="verification_send_to_different_email">Send to different email address</string>
+    <string name="verification_send_to_different_phone">Send to different phone number</string>
+    <string name="verification_resend_code">Resend your code</string>
+
+    <string name="near_account_create">Create NEAR Account</string>
+    <string name="near_account_create_label">Enter an Account ID to use with your NEAR account. Your Account ID will be used for all NEAR operations, including sending and receiving assets.
+    </string>
+    <string name="near_account_full_name">Full Name</string>
+    <string name="near_account_account_id">Account ID</string>
+    <string name="near_account_name_ex">Ex John Doe</string>
+    <string name="near_account_id_ex">yourname.near</string>
+    <string name="near_account_create_an">Create an Account</string>
+    <string name="near_account_login_with">Login with NEAR</string>
+
+<string name="gift_nft_title">Gift an NFT</string>
+    <string name="search_hint">Search People</string>
+    <string name="gift_nft_search_gift">Search Gift</string>
+    <string name="nft_item_art_title">Vecotry Illustration</string>
+    <string name="nft_create_today_label">Start Creating\nyour<b> NFTs</b>\nToday</string>
+    <string name="nft_create_an">Create an NFT</string>
+    <string name="nft_my">My NFTs</string>
+    <string name="nft_send_history">History</string>
+    <string name="nft_send">Send NFT</string>
+
+    <string name="nft_recent_transactions">Recent Transactions</string>
+    <string name="nft_send_all">All</string>
+    <string name="nft_send_sent">Sent</string>
+    <string name="nft_send_received">Received</string>
+
+</resources>

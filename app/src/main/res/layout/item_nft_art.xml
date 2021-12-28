@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="@dimen/nft_art_image_w"
+                android:background="@drawable/illustration"
+                android:layout_height="@dimen/nft_art_image_h">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="15dp"
+                    android:text="Digital Art"
+                    android:textColor="@color/colorSecondary"
+                    app:backgroundTint="@color/whiteDark"
+                    app:cornerRadius="10dp" />
+            </FrameLayout>
+
+            <TextView
+                style="@style/label"
+                android:layout_marginStart="15dp"
+
+                android:text="@string/nft_item_art_title"/>
+
+            <TextView
+                style="@style/label.sub"
+                android:layout_marginStart="15dp"
+                android:text="#15952"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

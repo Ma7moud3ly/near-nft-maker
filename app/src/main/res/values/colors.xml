@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#587BE0</color>
+    <color name="colorPrimaryVariant">#799CFF</color>
+    <color name="colorSecondary">#33373B</color>
+    <color name="colorSecondaryVariant">#A0A0A1</color>
+    <color name="colorDisabled">#BEBEC2</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="home_art_color">#FFCE20</color>
+
+    <color name="whiteDark">#DFDFE0</color>
+
+
+
+</resources>
