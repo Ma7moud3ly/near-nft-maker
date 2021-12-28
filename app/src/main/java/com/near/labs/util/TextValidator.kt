@@ -37,7 +37,7 @@ abstract class TextValidator(private val textView: TextView, private val type: I
     }
 
     private fun isPhone(str: String): Boolean {
-        return str.isNotEmpty() && android.util.Patterns.PHONE.matcher(str).matches()
+        return str.isNotEmpty()// && android.util.Patterns.PHONE.matcher(str).matches()
     }
 
 }

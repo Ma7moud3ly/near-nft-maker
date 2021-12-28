@@ -21,12 +21,23 @@
         android:id="@+id/homeEmailVerification"
         android:name="com.near.labs.fragments.HomeEmailVerification"
         android:label="HomeEmailVerification"
-        tools:layout="@layout/fragment_verification_email" />
+        tools:layout="@layout/fragment_verification_email">
+        <argument
+            android:name="email"
+            android:defaultValue="no email"
+            app:argType="string" />
+
+    </fragment>
     <fragment
         android:id="@+id/homePhoneVerification"
         android:name="com.near.labs.fragments.HomePhoneVerification"
         android:label="HomePhoneVerification"
-        tools:layout="@layout/fragment_verification_phone" />
+        tools:layout="@layout/fragment_verification_phone">
+        <argument
+            android:name="phone"
+            android:defaultValue="000"
+            app:argType="string" />
+    </fragment>
 
 
 </navigation>

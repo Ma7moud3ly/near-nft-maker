@@ -42,10 +42,15 @@ class HomeFragment : Fragment() {
         binding.homeGetStarted.setOnClickListener {
 
             if (binding.startWithEmail == true) {
-                val action = HomeFragmentDirections.actionHomeFragmentToHomeEmailVerification()
+                val action = HomeFragmentDirections.actionHomeFragmentToHomeEmailVerification(
+                    email = binding.homeEmailInput.text.toString()
+                )
+
                 findNavController().navigate(action)
             } else {
-                val action = HomeFragmentDirections.actionHomeFragmentToHomePhoneVerification()
+                val action = HomeFragmentDirections.actionHomeFragmentToHomePhoneVerification(
+                    binding.homePhoneInput.text.toString()
+                )
                 findNavController().navigate(action)
             }
         }
