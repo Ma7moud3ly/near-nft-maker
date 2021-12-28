@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeNFTFragment">
+
+
+    <fragment
+        android:id="@+id/homeNFTFragment"
+        android:name="com.near.labs.fragments.nft.HomeNFTFragment"
+        android:label="HomeNFTFragment"
+        tools:layout="@layout/fragment_nft_home"/>
+    <fragment
+        android:id="@+id/addNFTFragment"
+        android:name="com.near.labs.fragments.nft.AddNFTFragment"
+        android:label="AddNFTFragment"
+        tools:layout="@layout/fragment_nft_add" />
+    <fragment
+        android:id="@+id/sendNFTFragment"
+        android:name="com.near.labs.fragments.nft.SendNFTFragment"
+        android:label="SendNFTFragment"
+        tools:layout="@layout/fragment_nft_send" />
+
+</navigation>

@@ -63,8 +63,9 @@
 
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/next"
                 style="@style/button"
-                android:enabled="false"
+                android:enabled="true"
                 android:text="@string/near_account_create_an"
                 app:icon="@drawable/arrow_forward" />
 

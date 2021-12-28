@@ -12,12 +12,12 @@
             android:id="@+id/nft_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:text="john.near"
             android:textColor="@color/colorSecondary"
             app:backgroundTint="@color/white"
             app:cornerRadius="30dp"
-            android:layout_gravity="center"
             app:icon="@drawable/user_icon"
             app:iconTint="@color/colorSecondary"
             app:layout_constraintEnd_toEndOf="parent"
@@ -26,13 +26,19 @@
             app:strokeColor="@color/colorSecondaryVariant"
             app:strokeWidth="1dp" />
 
-        <include
-            layout="@layout/fragment_nft_add"
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_nft"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nft_graph" />
 
-        <include layout="@layout/section_footer" />
+        <include
+            android:id="@+id/footer"
+            layout="@layout/section_footer" />
 
     </LinearLayout>
 </layout>

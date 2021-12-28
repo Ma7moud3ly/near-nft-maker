@@ -1,14 +1,12 @@
-package com.near.labs.fragments
+package com.near.labs.fragments.home
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.near.labs.databinding.FragmentHomeBinding
-import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
 import com.near.labs.util.TextValidator
 

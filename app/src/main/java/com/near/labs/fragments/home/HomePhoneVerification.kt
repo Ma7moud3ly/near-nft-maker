@@ -1,34 +1,35 @@
-package com.near.labs.fragments
+package com.near.labs.fragments.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.near.labs.databinding.FragmentHomeBinding
-import com.near.labs.databinding.FragmentVerificationEmailBinding
+import com.near.labs.databinding.FragmentVerificationPhoneBinding
+
 import com.poovam.pinedittextfield.PinField
 
 
-class HomeEmailVerification : Fragment() {
-    private lateinit var binding: FragmentVerificationEmailBinding
+class HomePhoneVerification : Fragment() {
+    private lateinit var binding: FragmentVerificationPhoneBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentVerificationEmailBinding.inflate(inflater, container, false)
+        binding = FragmentVerificationPhoneBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        arguments?.getString("email").let {
-            binding.email.text = it
+        arguments?.getString("phone").let {
+            binding.phone.text = it
         }
+
 
         binding.verificationPin.onTextCompleteListener = object : PinField.OnTextCompleteListener {
             override fun onTextComplete(enteredText: String): Boolean {
@@ -37,6 +38,11 @@ class HomeEmailVerification : Fragment() {
             }
         }
 
+        binding.toNext.setOnClickListener {
+            val action =
+                HomePhoneVerificationDirections.actionHomePhoneVerificationToHomeCreateAccount()
+            findNavController().navigate(action)
+        }
 
     }
 

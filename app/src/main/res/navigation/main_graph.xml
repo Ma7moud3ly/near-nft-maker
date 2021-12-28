@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.near.labs.fragments.HomeFragment"
+        android:name="com.near.labs.fragments.home.HomeFragment"
         android:label="MenuFragment"
         tools:layout="@layout/fragment_home">
         <action
@@ -19,25 +19,36 @@
     </fragment>
     <fragment
         android:id="@+id/homeEmailVerification"
-        android:name="com.near.labs.fragments.HomeEmailVerification"
+        android:name="com.near.labs.fragments.home.HomeEmailVerification"
         android:label="HomeEmailVerification"
         tools:layout="@layout/fragment_verification_email">
         <argument
             android:name="email"
             android:defaultValue="no email"
             app:argType="string" />
+        <action
+            android:id="@+id/action_homeEmailVerification_to_homeCreateAccount"
+            app:destination="@id/homeCreateAccount" />
 
     </fragment>
     <fragment
         android:id="@+id/homePhoneVerification"
-        android:name="com.near.labs.fragments.HomePhoneVerification"
+        android:name="com.near.labs.fragments.home.HomePhoneVerification"
         android:label="HomePhoneVerification"
         tools:layout="@layout/fragment_verification_phone">
         <argument
             android:name="phone"
             android:defaultValue="000"
             app:argType="string" />
+        <action
+            android:id="@+id/action_homePhoneVerification_to_homeCreateAccount"
+            app:destination="@id/homeCreateAccount" />
     </fragment>
+    <fragment
+        android:id="@+id/homeCreateAccount"
+        android:name="com.near.labs.fragments.home.HomeCreateAccount"
+        android:label="HomeCreateAccount"
+        tools:layout="@layout/fragment_create_account" />
 
 
 </navigation>

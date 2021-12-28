@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="next"
             type="Boolean" />
@@ -25,12 +26,12 @@
 
         <TextView
             style="@style/label"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:text="@string/verification_to_email" />
+            android:text="@string/verification_to_email"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <TextView
-            style="@style/label.title"
             android:id="@+id/email"
+            style="@style/label.title"
             android:text="johndoe@gmail.com" />
 
         <TextView
@@ -43,6 +44,7 @@
 
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/to_next"
             style="@style/button"
             android:enabled="@{next,default=false}"
             android:text="@string/verification_continue"

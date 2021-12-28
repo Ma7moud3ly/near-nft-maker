@@ -43,6 +43,7 @@
 
         <com.google.android.material.button.MaterialButton
             style="@style/button"
+            android:id="@+id/to_next"
             android:enabled="@{next,default=false}"
             android:text="@string/verification_continue"
             app:icon="@drawable/arrow_forward" />
@@ -59,6 +60,7 @@
         <TextView
             android:id="@+id/verification_send_to_different_phone"
             style="@style/button_text"
+            android:layout_height="46dp"
             android:text="@string/verification_send_to_different_email" />
 
         <TextView
