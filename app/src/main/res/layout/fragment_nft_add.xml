@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp">
+
+            <TextView
+                style="@style/label.title"
+                android:layout_gravity="start|center"
+                android:text='@string/nft_create_title'
+                android:textColor="@color/colorSecondary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/see_all"
+                style="@style/button_text"
+                android:layout_gravity="end|center"
+                android:text="@string/nft_send"
+                app:icon="@drawable/add2"
+                app:iconSize="20dp" />
+
+        </FrameLayout>
+
+
+        <include layout="@layout/item_nft_art_vr" />
+        <include layout="@layout/item_nft_art_vr" />
+
+    </LinearLayout>
+</layout>

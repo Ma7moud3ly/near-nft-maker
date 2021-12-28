@@ -27,7 +27,7 @@
             app:strokeWidth="1dp" />
 
         <include
-            layout="@layout/fragment_nft_send"
+            layout="@layout/fragment_nft_add"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />

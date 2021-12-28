@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Near</string>
     <string name="home_phone_hint">Ex. (373) 378 8383</string>
+    <string name="home_email_hint">Ex. john.doe@gmail.com</string>
     <string name="home_wallet_name_hint">walletName.near</string>
 
     <string name="home_agreement">by clicking continue you must agree to near labs</string>
@@ -48,5 +49,9 @@
     <string name="nft_send_all">All</string>
     <string name="nft_send_sent">Sent</string>
     <string name="nft_send_received">Received</string>
+
+    <string name="nft_create_title">My NFTs</string>
+    <string name="nft_create">Create NFT</string>
+
 
 </resources>

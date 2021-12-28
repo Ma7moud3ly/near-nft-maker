@@ -1,89 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="start_with_email"
+            type="Boolean" />
+    </data>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/home_art_color"
-                android:src="@drawable/home_art" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|bottom"
-                android:paddingBottom="9dp"
-                android:src="@drawable/near_logo" />
-        </FrameLayout>
-
-        <com.google.android.material.button.MaterialButtonToggleGroup
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:singleSelection="true">
+            android:orientation="vertical">
 
-            <com.google.android.material.button.MaterialButton
-                style="@style/button_toggle"
-                android:text="@string/home_email" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <com.google.android.material.button.MaterialButton
-                style="@style/button_toggle"
-                android:text="@string/home_phone" />
-        </com.google.android.material.button.MaterialButtonToggleGroup>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/home_art_color"
+                    android:src="@drawable/home_art" />
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:paddingBottom="9dp"
+                    android:src="@drawable/near_logo" />
+            </FrameLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/home_phone"
-            style="@style/textInputLayout">
-
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/home_signup_tab"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/home_phone_hint" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginVertical="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:checkedButton="@id/home_email_tab"
+                app:selectionRequired="true"
+                app:singleSelection="true">
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/button"
-            android:enabled="false"
-            android:text="@string/home_get_started"
-            app:icon="@drawable/arrow_forward" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/home_email_tab"
+                    style="@style/button_toggle"
+                    android:text="@string/home_email" />
 
-        <include layout="@layout/section_divider" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/home_phone_tab"
+                    style="@style/button_toggle"
+                    android:text="@string/home_phone" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
 
-        <TextView
-            style="@style/label"
-            android:text="@string/home_have_account" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/home_phone"
+                style="@style/textInputLayout"
+                android:visibility="@{start_with_email?View.GONE:View.VISIBLE,default=gone}">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/home_phone_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_phone_hint"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/home_email"
+                style="@style/textInputLayout"
+                android:visibility="@{start_with_email?View.VISIBLE:View.GONE,default=visible}">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/home_email_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_email_hint"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/home_get_started"
+                style="@style/button"
+                android:enabled="false"
+                android:text="@string/home_get_started"
+                app:icon="@drawable/arrow_forward" />
+
+            <include layout="@layout/section_divider" />
+
+            <TextView
+                style="@style/label"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:text="@string/home_have_account" />
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField"
-            style="@style/textInputLayout">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField"
+                style="@style/textInputLayout">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/home_wallet_name_hint" />
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_wallet_name_hint" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/button"
-            android:text="@string/home_login"
-            app:icon="@drawable/arrow_forward" />
+            <com.google.android.material.button.MaterialButton
+                style="@style/button"
+                android:text="@string/home_login"
+                app:icon="@drawable/arrow_forward" />
 
-        <include layout="@layout/section_user_agreement" />
-    </LinearLayout>
-</ScrollView>
+            <include layout="@layout/section_user_agreement" />
+        </LinearLayout>
+    </ScrollView>
+</layout>
