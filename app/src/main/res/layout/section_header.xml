@@ -72,21 +72,23 @@
             app:layout_constraintTop_toBottomOf="@id/header_exit" />
 
 
-        <SearchView
+        <androidx.appcompat.widget.SearchView
             android:id="@+id/header_search"
             android:layout_width="0dp"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/oval"
             android:iconifiedByDefault="false"
-            android:queryHint="@string/search_hint"
-            android:visibility="@{showSearch?View.VISIBLE:View.GONE,default=gone}"
+            app:queryHint="@string/search_hint"
+            android:textSize="11sp"
+            android:visibility="@{showSearch?View.VISIBLE:View.GONE,default=invisible}"
             app:iconifiedByDefault="false"
             app:layout_constraintEnd_toStartOf="@id/header_import"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header_exit" />
+            app:layout_constraintTop_toBottomOf="@id/header_exit"
+            app:queryBackground="@null" />
 
         <TextView
             android:id="@+id/header_import"

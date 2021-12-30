@@ -35,9 +35,11 @@
     <string name="near_account_create_an">Create an Account</string>
     <string name="near_account_login_with">Login with NEAR</string>
 
-<string name="gift_nft_title">Gift an NFT</string>
+    <string name="gift_title">Gift an NFT</string>
+    <string name="gift_send">Send Gift</string>
+    <string name="share_app">Share App</string>
+
     <string name="search_hint">Search People</string>
-    <string name="gift_nft_search_gift">Search Gift</string>
     <string name="nft_item_art_title">Vecotry Illustration</string>
     <string name="nft_create_today_label">Start Creating\nyour<b> NFTs</b>\nToday</string>
     <string name="nft_create_an">Create an NFT</string>

@@ -8,4 +8,5 @@
     <dimen name="nft_create_today_h">192dp</dimen>
     <dimen name="verification_card_top">35dp</dimen>
     <dimen name="verification_card_bottom">-15dp</dimen>
+    <dimen name="round_layout_padding_bottom">40dp</dimen>
 </resources>

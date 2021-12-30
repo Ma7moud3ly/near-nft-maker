@@ -2,23 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/black">
+    <FrameLayout style="@style/card_round_container">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitStart"
-            android:src="@drawable/home_art_dark" />
+        <ImageView style="@style/card_round_background" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/verification_card_top"
-            android:layout_marginBottom="@dimen/verification_card_bottom"
-            app:cardCornerRadius="10dp">
+        <androidx.cardview.widget.CardView style="@style/card_round">
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -29,8 +17,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center|top"
-                    android:orientation="vertical"
-                    android:paddingBottom="30dp">
+                    android:orientation="vertical">
 
                     <include
                         android:id="@+id/create_header"

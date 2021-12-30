@@ -11,10 +11,14 @@
         tools:layout="@layout/fragment_signup_home">
         <action
             android:id="@+id/action_home2_to_emailVerification"
-            app:destination="@id/emailVerification" />
+            app:destination="@id/emailVerification"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left" />
         <action
             android:id="@+id/action_home2_to_phoneVerification"
-            app:destination="@id/phoneVerification" />
+            app:destination="@id/phoneVerification"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left" />
     </fragment>
     <fragment
         android:id="@+id/emailVerification"
@@ -27,7 +31,9 @@
             app:argType="string" />
         <action
             android:id="@+id/action_emailVerification_to_createAccount"
-            app:destination="@id/createAccount" />
+            app:destination="@id/createAccount"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left" />
     </fragment>
     <fragment
         android:id="@+id/phoneVerification"
@@ -40,11 +46,24 @@
             app:argType="string" />
         <action
             android:id="@+id/action_phoneVerification_to_createAccount"
-            app:destination="@id/createAccount" />
+            app:destination="@id/createAccount"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left" />
     </fragment>
     <fragment
         android:id="@+id/createAccount"
         android:name="com.near.labs.fragments.signup.CreateAccount"
         android:label="CreateAccount"
-        tools:layout="@layout/fragment_signup_create" />
+        tools:layout="@layout/fragment_signup_create">
+        <action
+            android:id="@+id/action_createAccount_to_giftAnNFT"
+            app:destination="@id/giftAnNFT"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/giftAnNFT"
+        android:name="com.near.labs.fragments.gift.GiftAnNFT"
+        android:label="GiftAnNFT"
+        tools:layout="@layout/fragment_gift" />
 </navigation>

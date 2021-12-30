@@ -9,34 +9,21 @@
             type="Boolean" />
     </data>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/black">
+    <FrameLayout style="@style/card_round_container">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitStart"
-            android:src="@drawable/home_art_dark" />
+        <ImageView style="@style/card_round_background" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_marginTop="@dimen/verification_card_top"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="@dimen/verification_card_bottom"
-            app:cardCornerRadius="10dp"
-            android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView style="@style/card_round">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center|top"
-                android:paddingBottom="20dp"
                 android:orientation="vertical">
 
                 <include
-                    layout="@layout/section_header"
                     android:id="@+id/verification_header"
+                    layout="@layout/section_header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
@@ -45,15 +32,16 @@
                     app:title="@{@string/verification}" />
 
                 <TextView
-                    style="@style/label"
                     android:id="@+id/verification_message"
+                    style="@style/label"
                     android:text="@string/verification_to_email"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 <TextView
                     android:id="@+id/verification_id"
                     style="@style/label.title"
-                    android:text="johndoe@gmail.com" />
+                    android:text="johndoe@gmail.com"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
                 <TextView
                     style="@style/label.small"
