@@ -3,52 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
-
+    app:startDestination="@id/home">
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.near.labs.fragments.home.HomeFragment"
-        android:label="MenuFragment"
-        tools:layout="@layout/fragment_home">
+        android:id="@+id/home"
+        android:name="com.near.labs.fragments.signup.Home"
+        android:label="Home"
+        tools:layout="@layout/fragment_signup_home">
         <action
-            android:id="@+id/action_homeFragment_to_homeEmailVerification"
-            app:destination="@id/homeEmailVerification" />
+            android:id="@+id/action_home2_to_emailVerification"
+            app:destination="@id/emailVerification" />
         <action
-            android:id="@+id/action_homeFragment_to_homePhoneVerification"
-            app:destination="@id/homePhoneVerification" />
+            android:id="@+id/action_home2_to_phoneVerification"
+            app:destination="@id/phoneVerification" />
     </fragment>
     <fragment
-        android:id="@+id/homeEmailVerification"
-        android:name="com.near.labs.fragments.home.HomeEmailVerification"
-        android:label="HomeEmailVerification"
-        tools:layout="@layout/fragment_verification_email">
+        android:id="@+id/emailVerification"
+        android:name="com.near.labs.fragments.signup.EmailVerification"
+        android:label="EmailVerification"
+        tools:layout="@layout/fragment_signup_verification">
         <argument
             android:name="email"
             android:defaultValue="no email"
             app:argType="string" />
         <action
-            android:id="@+id/action_homeEmailVerification_to_homeCreateAccount"
-            app:destination="@id/homeCreateAccount" />
-
+            android:id="@+id/action_emailVerification_to_createAccount"
+            app:destination="@id/createAccount" />
     </fragment>
     <fragment
-        android:id="@+id/homePhoneVerification"
-        android:name="com.near.labs.fragments.home.HomePhoneVerification"
-        android:label="HomePhoneVerification"
-        tools:layout="@layout/fragment_verification_phone">
+        android:id="@+id/phoneVerification"
+        android:name="com.near.labs.fragments.signup.PhoneVerification"
+        android:label="PhoneVerification"
+        tools:layout="@layout/fragment_signup_verification">
         <argument
             android:name="phone"
             android:defaultValue="000"
             app:argType="string" />
         <action
-            android:id="@+id/action_homePhoneVerification_to_homeCreateAccount"
-            app:destination="@id/homeCreateAccount" />
+            android:id="@+id/action_phoneVerification_to_createAccount"
+            app:destination="@id/createAccount" />
     </fragment>
     <fragment
-        android:id="@+id/homeCreateAccount"
-        android:name="com.near.labs.fragments.home.HomeCreateAccount"
-        android:label="HomeCreateAccount"
-        tools:layout="@layout/fragment_create_account" />
-
-
+        android:id="@+id/createAccount"
+        android:name="com.near.labs.fragments.signup.CreateAccount"
+        android:label="CreateAccount"
+        tools:layout="@layout/fragment_signup_create" />
 </navigation>

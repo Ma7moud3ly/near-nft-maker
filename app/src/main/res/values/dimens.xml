@@ -6,4 +6,6 @@
     <dimen name="nft_art_image_h">160dp</dimen>
     <dimen name="nft_create_today_w">185dp</dimen>
     <dimen name="nft_create_today_h">192dp</dimen>
+    <dimen name="verification_card_top">35dp</dimen>
+    <dimen name="verification_card_bottom">-15dp</dimen>
 </resources>

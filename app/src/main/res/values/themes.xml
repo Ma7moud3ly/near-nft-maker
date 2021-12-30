@@ -8,23 +8,22 @@
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- full screen -->
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-
         <item name="android:textColor">@color/colorSecondary</item>
-        <!-- Status bar color. -->
-        <item name="fontFamily">Manrope</item>
-
+        <item name="fontFamily">@font/inter</item>
         <item name="android:textColorHighlight">@color/colorPrimary</item>
+
+        <!-- full screen -->
+        <item name="android:windowTranslucentStatus">true</item>
+
     </style>
+
+
 
     <style name="button">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_height">55dp</item>
         <item name="android:layout_gravity">center</item>
-        <item name="cornerRadius">15dp</item>
+        <item name="cornerRadius">10dp</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>
         <item name="iconGravity">end</item>
@@ -37,9 +36,22 @@
 
     <style name="button_toggle" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:layout_width">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/colorSecondary</item>
         <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="mMaterialButtonToggleGroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="checkedButton">@id/home_email_tab</item>
+        <item name="selectionRequired">true</item>
+        <item name="singleSelection">true</item>
     </style>
 
     <style name="button_toggle2" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
@@ -50,18 +62,24 @@
     </style>
 
 
-
     <style name="textInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">5dp</item>
-        <item name="android:layout_marginStart">15dp</item>
-        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
         <item name="android:layout_marginBottom">5dp</item>
-        <item name="android:height">50dp</item>
-        <item name="android:hint">@string/home_phone_hint</item>
+        <item name="android:height">45dp</item>
         <item name="hintEnabled">false</item>
     </style>
+
+    <style name="textInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+    </style>
+
 
     <style name="ripple">
         <item name="android:clickable">true</item>

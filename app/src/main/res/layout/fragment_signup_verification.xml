@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="next"
+            type="Boolean" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart"
+            android:src="@drawable/home_art_dark" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="@dimen/verification_card_top"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/verification_card_bottom"
+            app:cardCornerRadius="10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|top"
+                android:paddingBottom="20dp"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/section_header"
+                    android:id="@+id/verification_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    app:progress="@{30}"
+                    app:showProgress="@{true}"
+                    app:title="@{@string/verification}" />
+
+                <TextView
+                    style="@style/label"
+                    android:id="@+id/verification_message"
+                    android:text="@string/verification_to_email"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <TextView
+                    android:id="@+id/verification_id"
+                    style="@style/label.title"
+                    android:text="johndoe@gmail.com" />
+
+                <TextView
+                    style="@style/label.small"
+                    android:text="@string/verification_enter_code" />
+
+                <com.poovam.pinedittextfield.SquarePinField
+                    android:id="@+id/verification_pin"
+                    style="@style/pin_field" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/to_next"
+                    style="@style/button"
+                    android:enabled="@{next,default=false}"
+                    android:text="@string/verification_continue"
+                    app:icon="@drawable/arrow_forward" />
+
+                <include layout="@layout/section_divider" />
+
+                <TextView
+                    android:id="@+id/verification_didnt_receive_code"
+                    style="@style/label"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/verification_didnt_receive_code" />
+
+                <TextView
+                    android:id="@+id/verification_alternative"
+                    style="@style/button_text"
+                    android:text="@string/verification_send_to_different_email" />
+
+                <TextView
+                    android:id="@+id/verification_resend_code"
+                    style="@style/button_text"
+                    android:text="@string/verification_resend_code" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>
