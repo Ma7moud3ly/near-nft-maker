@@ -78,13 +78,6 @@ class GiftAnNFT : Fragment() {
         val gridLayoutManager =
             GridLayoutManager(requireContext(), 1, GridLayoutManager.VERTICAL, false)
         recyclerView.layoutManager = gridLayoutManager
-        recyclerView.addItemDecoration(
-            DividerItemDecoration(
-                context,
-                LinearLayoutManager.HORIZONTAL
-            )
-        )
-
 
         recyclerAdapter = GiftAnNFTAdapter(users)
 

@@ -3,23 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeNFTFragment">
+    app:startDestination="@id/NFTHome">
 
 
     <fragment
-        android:id="@+id/homeNFTFragment"
-        android:name="com.near.labs.fragments.nft.HomeNFTFragment"
-        android:label="HomeNFTFragment"
-        tools:layout="@layout/fragment_nft_home"/>
+        android:id="@+id/NFTHome"
+        android:name="com.near.labs.fragments.nft.NFTHome"
+        tools:layout="@layout/fragment_nft_home"
+        android:label="HomeNFT" >
+        <action
+            android:id="@+id/action_NFTHome_to_NFTAll"
+            app:destination="@id/NFTAll" />
+        <action
+            android:id="@+id/action_NFTHome_to_NFTHistory"
+            app:destination="@id/NFTHistory" />
+    </fragment>
+
+
     <fragment
-        android:id="@+id/addNFTFragment"
-        android:name="com.near.labs.fragments.nft.AddNFTFragment"
-        android:label="AddNFTFragment"
-        tools:layout="@layout/fragment_nft_add" />
+        android:id="@+id/NFTHistory"
+        tools:layout="@layout/fragment_nft_history"
+        android:name="com.near.labs.fragments.nft.NFTHistory"
+        android:label="SendNFT" />
+
     <fragment
-        android:id="@+id/sendNFTFragment"
-        android:name="com.near.labs.fragments.nft.SendNFTFragment"
-        android:label="SendNFTFragment"
-        tools:layout="@layout/fragment_nft_send" />
+        android:id="@+id/NFTAll"
+        tools:layout="@layout/fragment_nft_all"
+        android:name="com.near.labs.fragments.nft.NFTAll"
+        android:label="NFTAll" />
+
 
 </navigation>

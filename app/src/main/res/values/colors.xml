@@ -3,7 +3,7 @@
     <color name="colorPrimary">#2F80ED</color>
     <color name="colorPrimaryVariant">#799CFF</color>
     <color name="colorSecondary">#000000</color>
-    <color name="colorSecondaryVariant">#BDBDBD</color>
+    <color name="colorSecondaryVariant">#808080</color>
     <color name="colorDisabled">#BDBDBD</color>
 
     <color name="black">#FF000000</color>

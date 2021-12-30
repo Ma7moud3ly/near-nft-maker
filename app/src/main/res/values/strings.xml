@@ -44,16 +44,19 @@
     <string name="nft_create_today_label">Start Creating\nyour<b> NFTs</b>\nToday</string>
     <string name="nft_create_an">Create an NFT</string>
     <string name="nft_my">My NFTs</string>
-    <string name="nft_send_history">History</string>
-    <string name="nft_send">Send NFT</string>
+    <string name="nft_sell_all">See All</string>
+    <string name="nft_history">History</string>
+    <string name="nft_history_send">Send NFT</string>
 
     <string name="nft_recent_transactions">Recent Transactions</string>
-    <string name="nft_send_all">All</string>
-    <string name="nft_send_sent">Sent</string>
-    <string name="nft_send_received">Received</string>
+    <string name="nft_history_all">All</string>
+    <string name="nft_history_sent">Sent</string>
+    <string name="nft_history_received">Received</string>
 
     <string name="nft_create_title">My NFTs</string>
     <string name="nft_create">Create NFT</string>
+    <string name="transaction_sent_to">Sent to</string>
+    <string name="transaction_received_from">Received from</string>
 
 
 </resources>

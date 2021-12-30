@@ -44,6 +44,8 @@
         <entry key="..\:/Workspace/clients/Near/app/src/main/res/menu/footer_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Workspace/clients/Near/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.10989583333333333" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/drawable/arrow_forward.xml" value="0.2703125" />
+        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/drawable/circle.xml" value="0.2703125" />
+        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/drawable/circle_border.xml" value="0.2703125" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/drawable/home_art.xml" value="0.2703125" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/drawable/home_art_dark.xml" value="0.2703125" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/drawable/ic_art.xml" value="0.2703125" />
@@ -58,8 +60,10 @@
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_nft.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_nft_add.xml" value="0.25416666666666665" />
+        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_nft_all.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_nft_gift.xml" value="0.25416666666666665" />
-        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_nft_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_nft_history.xml" value="0.25416666666666665" />
+        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_nft_home.xml" value="0.264" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_nft_send.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_signup_create.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_signup_email.xml" value="0.536" />
@@ -68,12 +72,18 @@
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_signup_verification.xml" value="0.25025641025641027" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_verification_email.xml" value="0.264" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/fragment_verification_phone.xml" value="0.25416666666666665" />
+        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/item_art_category.xml" value="0.25025641025641027" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/item_gift_person.xml" value="0.4844290657439446" />
+        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/item_nft.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/item_nft_art.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/item_nft_art_vr.xml" value="0.25416666666666665" />
+        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/item_nft_create_today.xml" value="0.25416666666666665" />
+        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/item_nft_transaction.xml" value="0.4844290657439446" />
+        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/item_nft_vr.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/section_divider.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/section_footer.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/section_header.xml" value="0.25025641025641027" />
+        <entry key="..\:/upwork/near/android-d-24/app/src/main/res/layout/section_title.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/menu/footer_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/upwork/near/android-d-24/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
       </map>

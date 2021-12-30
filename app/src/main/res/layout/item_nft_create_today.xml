@@ -5,6 +5,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
         app:cardCornerRadius="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +17,8 @@
             <ImageView
                 android:layout_width="@dimen/nft_create_today_w"
                 android:layout_height="@dimen/nft_create_today_h"
-                android:src="@drawable/art_nft_create_today"
+                android:src="@drawable/nft_art"
+                android:scaleType="fitStart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

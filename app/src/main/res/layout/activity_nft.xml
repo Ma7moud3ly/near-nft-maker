@@ -3,10 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
+        android:id="@+id/nft_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/whiteDark"
-        android:orientation="vertical">
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/round_layout_padding_bottom">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/nft_user"

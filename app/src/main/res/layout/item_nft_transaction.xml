@@ -2,34 +2,43 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+        <import type="com.near.labs.data.TRANS_TYPE" />
+
+        <variable
+            name="transaction"
+            type="com.near.labs.data.Transaction" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="10dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/transaction_image"
             android:layout_width="@dimen/user_avatar_wh"
             android:layout_height="@dimen/user_avatar_wh"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@drawable/arrow"
-            android:rotation="-45"
-            android:background="@color/whiteDark"
-            app:civ_border_color="@color/black"
-            app:civ_border_width="1dp"
+            android:background="@drawable/circle_border"
+            android:padding="12dp"
+            android:rotation="@{transaction.type==TRANS_TYPE.SEND?0:180,default=0}"
+            android:src="@drawable/ic_arrow_rotated"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
 
         <TextView
             android:id="@+id/transaction_number"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:gravity="start|bottom"
+            android:textSize="14sp"
             android:paddingStart="10dp"
-            android:text="#1525"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text='@{"#"+transaction.number,default="#1233"}'
             android:textColor="@color/colorPrimary"
             app:layout_constraintBottom_toTopOf="@id/transaction_recipient"
             app:layout_constraintEnd_toStartOf="@id/transaction_date"
@@ -37,33 +46,47 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/transaction_recipient"
-            android:layout_width="0dp"
+            android:id="@+id/transaction_recipient_label"
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:gravity="start|top"
             android:paddingStart="10dp"
-            android:text="Sent To John_doe"
+            android:textSize="12sp"
+            android:paddingEnd="10dp"
+            android:text="@{transaction.type==TRANS_TYPE.SEND?@string/transaction_sent_to:@string/transaction_received_from,default=@string/transaction_sent_to}"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/colorDisabled"
+            android:textColor="@color/colorSecondary"
+            app:layout_constraintBottom_toBottomOf="@id/transaction_image"
+            app:layout_constraintEnd_toStartOf="@id/transaction_recipient"
+            app:layout_constraintStart_toEndOf="@id/transaction_image"
+            app:layout_constraintTop_toBottomOf="@id/transaction_number" />
+
+        <TextView
+            android:id="@+id/transaction_recipient"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ellipsize="end"
+            android:gravity="start|top"
+            android:textSize="12sp"
+            android:text='@{transaction.receiver,default="John Does"}'
+            android:textColor="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="@id/transaction_image"
             app:layout_constraintEnd_toStartOf="@id/transaction_date"
-            app:layout_constraintStart_toEndOf="@id/transaction_image"
+            app:layout_constraintStart_toEndOf="@id/transaction_recipient_label"
             app:layout_constraintTop_toBottomOf="@id/transaction_number" />
 
         <TextView
             android:id="@+id/transaction_date"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:paddingStart="10dp"
             android:gravity="center"
-            android:text="5 days ago"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/colorDisabled"
+            android:paddingStart="12dp"
+            android:text='@{transaction.date+" days age",default="3 days ago"}'
+            android:textColor="@color/colorSecondaryVariant"
+            android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="@id/transaction_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/transaction_image" />
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

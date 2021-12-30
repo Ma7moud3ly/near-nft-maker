@@ -5,6 +5,7 @@ import android.text.Editable
 import android.widget.TextView
 
 import android.text.TextWatcher
+import com.near.labs.data.VER_TYPE
 
 
 abstract class TextValidator(private val textView: TextView, private val type: VER_TYPE) : TextWatcher {

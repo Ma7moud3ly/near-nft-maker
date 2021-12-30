@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="nft"
+            type="com.near.labs.data.NFT" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="@dimen/nft_art_image_w"
+                android:id="@+id/card_layout"
+                android:layout_height="@dimen/nft_art_image_h">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/art1"
+                    app:localImage="@{nft.image}" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="15dp"
+                    android:text='@{nft.type,default="Digital Art"}'
+                    android:textColor="@color/colorSecondary"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="10dp" />
+            </FrameLayout>
+
+            <TextView
+                style="@style/label"
+                android:layout_marginStart="15dp"
+                android:text='@{nft.description,default="Iilustration"}' />
+
+            <TextView
+                style="@style/label.sub"
+                android:layout_marginStart="15dp"
+                android:text='@{"#"+nft.count,default="#15952"}' />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

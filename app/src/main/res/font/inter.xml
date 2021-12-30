@@ -8,6 +8,6 @@
         android:fontWeight="400" />
     <font
         android:font="@font/inter_extra_bold"
-        android:fontWeight="800" />
+        android:fontWeight="600" />
 
 </font-family>

@@ -6,6 +6,10 @@
         <variable
             name="title"
             type="String" />
+
+        <variable
+            name="action"
+            type="String" />
     </data>
 
     <FrameLayout
@@ -20,10 +24,10 @@
             android:textColor="@color/colorSecondary" />
 
         <Button
-            android:id="@+id/see_all"
+            android:id="@+id/action"
             style="@style/button_text"
             android:layout_gravity="end|center"
-            android:text="See All" />
+            android:text='@{action,default="See All"}' />
 
     </FrameLayout>
 

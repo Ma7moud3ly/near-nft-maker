@@ -23,7 +23,10 @@
         </activity>
         <activity
             android:name=".activities.NFTActivity"
-            android:exported="true" />
+            android:theme="@style/Theme.Near.Hide.Status.Bar"
+            android:exported="true" >
+
+        </activity>
 
     </application>
 

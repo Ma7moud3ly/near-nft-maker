@@ -7,11 +7,11 @@
 
         <import type="android.view.View" />
 
-        <import type="com.near.labs.utils.VER_TYPE" />
+        <import type="com.near.labs.data.VER_TYPE" />
 
         <variable
             name="start_with"
-            type="com.near.labs.utils.VER_TYPE" />
+            type="com.near.labs.data.VER_TYPE" />
 
     </data>
 

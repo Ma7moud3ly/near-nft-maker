@@ -4,13 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.near.labs.activities.MainActivity
 import com.near.labs.databinding.FragmentSignupHomeBinding
 import com.near.labs.utils.TextValidator
-import com.near.labs.utils.VER_TYPE
+import com.near.labs.data.VER_TYPE
 
 
 class Home : Fragment() {

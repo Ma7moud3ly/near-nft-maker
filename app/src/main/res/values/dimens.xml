@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="get_stated_hr_margin">20dp</dimen>
-    <dimen name="user_avatar_wh">45dp</dimen>
+    <dimen name="user_avatar_wh">50dp</dimen>
     <dimen name="nft_art_image_w">230dp</dimen>
     <dimen name="nft_art_image_h">160dp</dimen>
     <dimen name="nft_create_today_w">185dp</dimen>
