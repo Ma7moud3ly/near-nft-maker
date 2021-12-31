@@ -58,6 +58,24 @@
     <string name="transaction_sent_to">Sent to</string>
     <string name="transaction_received_from">Received from</string>
 
+
+    <string name="nft_create_upload">Upload Files</string>
+    <string name="nft_create_choose">Choose File</string>
+    <string name="nft_create_nft_title">TITLE</string>
+    <string name="nft_create_description">Description</string>
+    <string name="nft_create_properties">PROPERTIES</string>
+    <string name="nft_create_more">Add More</string>
+    <string name="nft_create_category">Category</string>
+    <string name="nft_create_creator">Creator</string>
+    <string name="nft_create_preview">Preview</string>
+    <string name="nft_create_nft_title_hint">Ex. Redeemable Art</string>
+    <string name="nft_create_description_hint">Ex. Redeemable Art</string>
+    <string name="nft_create_property_key_hint">Ex. Size</string>
+    <string name="nft_create_property_val_hint">Ex. 40</string>
+    <string name="nft_create_add_more">+ Add More</string>
+    <string name="nft_create_next">Next</string>
+    <string name="nft_create_mint">Mint NFT</string>
+
     <string name="settings_connected_wallet">Connected Wallet</string>
     <string name="settings_profile_settings">Profile Settings</string>
     <string name="settings_name">Name</string>
@@ -65,6 +83,13 @@
     <string name="settings_phone">Phone Number</string>
     <string name="settings_security">Security</string>
     <string name="settings_dialog_confirm">Ok</string>
+    <string name="nft_creator_empty_title_msg">NFT title should not be empty!</string>
+    <string name="nft_creator_no_file_msg">No NFT art was chosen!</string>
+    <string name="nft_creator">Creator</string>
 
+    <string-array name="nft_categories">
+        <item>Digital Art</item>
+        <item>Digital Video</item>
+    </string-array>
 
 </resources>

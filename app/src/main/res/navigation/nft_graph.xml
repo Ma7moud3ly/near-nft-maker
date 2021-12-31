@@ -9,8 +9,8 @@
     <fragment
         android:id="@+id/NFTHome"
         android:name="com.near.labs.fragments.nft.NFTHome"
-        tools:layout="@layout/fragment_nft_home"
-        android:label="HomeNFT" >
+        android:label="HomeNFT"
+        tools:layout="@layout/fragment_nft_home">
         <action
             android:id="@+id/action_NFTHome_to_NFTAll"
             app:destination="@id/NFTAll" />
@@ -22,15 +22,15 @@
 
     <fragment
         android:id="@+id/NFTHistory"
-        tools:layout="@layout/fragment_nft_history"
         android:name="com.near.labs.fragments.nft.NFTHistory"
-        android:label="SendNFT" />
+        android:label="SendNFT"
+        tools:layout="@layout/fragment_nft_history" />
 
     <fragment
         android:id="@+id/NFTAll"
-        tools:layout="@layout/fragment_nft_all"
         android:name="com.near.labs.fragments.nft.NFTAll"
-        android:label="NFTAll" />
+        android:label="NFTAll"
+        tools:layout="@layout/fragment_nft_all" />
 
 
 </navigation>

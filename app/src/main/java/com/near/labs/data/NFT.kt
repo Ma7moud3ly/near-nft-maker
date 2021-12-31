@@ -1,3 +1,14 @@
 package com.near.labs.data
 
-class NFT(val type: String, val description: String, val image: String, val count: String)
+import android.net.Uri
+import java.io.Serializable
+
+class NFT(
+    val id: String,
+    val category: String,
+    val title: String,
+    var image: String? = "",
+    val imageUri: Uri? = null,
+    var description: String = "",
+    var properties: List<NFTProperty> = mutableListOf(),
+) : Serializable

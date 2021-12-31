@@ -13,7 +13,8 @@
     <color name="home_art_color">#FFCE20</color>
 
     <color name="whiteDark">#DFDFE0</color>
-
+    <color name="whiteDark2">#f7f7f7</color>
+    <color name="nft_creator_status">#a2a2a2</color>
 
 
 </resources>

@@ -1,12 +1,11 @@
 package com.near.labs.adapters
 
-import android.app.Activity
-import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.near.labs.data.NFT
 import com.near.labs.databinding.ItemNftBinding
+import com.near.labs.utils.RecyclerItemResizer
 
 
 class NFTsAdapter(
@@ -22,13 +21,7 @@ class NFTsAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val binding: ItemNftBinding =
             ItemNftBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        if (isVertical) {
-            val context = binding.root.context
-            val displayMetrics = DisplayMetrics()
-            (context as Activity).windowManager.defaultDisplay.getMetrics(displayMetrics)
-            binding.cardLayout.layoutParams.width = displayMetrics.widthPixels
-            binding.cardLayout.layoutParams.height = (displayMetrics.widthPixels * 0.5).toInt()
-        }
+        if (isVertical) RecyclerItemResizer.fitScreen(binding.cardLayout)
         return ItemViewHolder(binding)
     }
 

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        style="@style/card_round_container"
+        android:paddingBottom="0dp">
+
+
+        <androidx.cardview.widget.CardView
+            style="@style/card_round"
+            android:layout_marginTop="40dp">
+
+            <ScrollView
+                android:id="@+id/nft_create_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <include
+                        android:id="@+id/nf_create_header"
+                        layout="@layout/section_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        app:progress="@{30}"
+                        app:showProgress="@{true}"
+                        app:title="@{@string/nft_create_an}" />
+
+                    <TextView
+                        style="@style/label.sub"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/nft_create_upload" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/nft_creator_hr_margin"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/round_dashed_border"
+                        android:gravity="center|bottom"
+                        android:orientation="vertical"
+                        android:paddingTop="30dp"
+                        android:paddingBottom="20dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:id="@+id/test_img"
+                            android:layout_height="150dp"/>
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/nft_select_file"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:elevation="5dp"
+                            android:text="@string/nft_create_choose"
+                            android:textColor="@color/colorSecondary"
+                            app:cornerRadius="5dp"
+                            app:iconTint="@color/colorPrimary" />
+
+                        <TextView
+                            style="@style/label.sub"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="15dp"
+                            android:paddingHorizontal="30dp"
+                            android:text="PNG, GIF, WEBP, MP4 or MP3. Max 100mb." />
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/label.sub"
+                        android:layout_marginStart="@dimen/nft_creator_hr_margin"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/nft_create_nft_title"
+                        android:textColor="@color/colorPrimary" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/textInputLayout"
+                        android:background="@color/whiteDark2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/nft_create_title"
+                            style="@style/textInput"
+                            android:hint="@string/nft_create_nft_title_hint" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        style="@style/label.sub"
+                        android:layout_marginStart="@dimen/nft_creator_hr_margin"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/nft_create_description" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/textInputLayout"
+                        android:background="@color/whiteDark2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/nft_create_description"
+                            style="@style/textInput"
+                            android:layout_height="100dp"
+                            android:hint="@string/nft_create_description_hint"
+                            android:singleLine="false" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/label.sub"
+                        android:layout_marginStart="@dimen/nft_creator_hr_margin"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/nft_create_category" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/nft_create_categories"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="@dimen/nft_creator_hr_margin"
+                        android:layout_marginVertical="10dp" />
+
+                    <TextView
+                        style="@style/label.sub"
+                        android:layout_marginStart="@dimen/nft_creator_hr_margin"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/nft_create_properties" />
+
+                    <LinearLayout
+                        android:id="@+id/nft_create_property_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/nft_creator_hr_margin">
+
+                        <include layout="@layout/item_nft_property" />
+
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/nft_create_add_more"
+                        style="@style/button_text"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/nft_creator_hr_margin"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/nft_create_add_more" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/nft_create_next"
+                        style="@style/button"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="30dp"
+                        android:text="@string/nft_create_next"
+                        app:icon="@drawable/arrow_forward" />
+
+
+                </LinearLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>

@@ -57,10 +57,10 @@ class NFTHome : NFTBase() {
 
 
         val fakeData = mutableListOf<NFT>()
-        fakeData.add(NFT("Digital Art", "Vecotry Illustration ", "art1", "8950"))
-        fakeData.add(NFT("Digital Art", "Vecotry Illustration ", "art2", "4525"))
-        fakeData.add(NFT("Digital Art", "Vecotry Illustration ", "art1", "3250"))
-        fakeData.add(NFT("Digital Art", "Vecotry Illustration ", "art2", "7852"))
+        fakeData.add(NFT(category="Digital Art", title="Vecotry Illustration ", image="art1", id="8950"))
+        fakeData.add(NFT(category="Digital Art", title="Edge Illustration ", image="art2", id="8544"))
+        fakeData.add(NFT(category="Digital Art", title="Vecotry Illustration ", image="art1", id="8950"))
+        fakeData.add(NFT(category="Digital Art", title="Edge Illustration ", image="art2", id="8544"))
         model.nfts.value = fakeData
 
         val fakeData2 = mutableListOf<Transaction>()

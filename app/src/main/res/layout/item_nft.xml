@@ -4,9 +4,19 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="nft"
             type="com.near.labs.data.NFT" />
+
+        <variable
+            name="user"
+            type="com.near.labs.data.User" />
+
+        <variable
+            name="preview"
+            type="Boolean" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -23,23 +33,24 @@
             android:orientation="vertical">
 
             <FrameLayout
-                android:layout_width="@dimen/nft_art_image_w"
                 android:id="@+id/card_layout"
+                android:layout_width="@dimen/nft_art_image_w"
                 android:layout_height="@dimen/nft_art_image_h">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
+                    android:id="@+id/nft_image"
                     android:src="@drawable/art1"
-                    app:localImage="@{nft.image}" />
+                    app:resourceImage="@{nft.image}" />
 
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_margin="15dp"
-                    android:text='@{nft.type,default="Digital Art"}'
+                    android:text='@{nft.category,default="Digital Art"}'
                     android:textColor="@color/colorSecondary"
                     app:backgroundTint="@color/white"
                     app:cornerRadius="10dp" />
@@ -48,12 +59,18 @@
             <TextView
                 style="@style/label"
                 android:layout_marginStart="15dp"
-                android:text='@{nft.description,default="Iilustration"}' />
+                android:text='@{nft.title,default="Iilustration"}' />
 
             <TextView
                 style="@style/label.sub"
                 android:layout_marginStart="15dp"
-                android:text='@{"#"+nft.count,default="#15952"}' />
+                android:text='@{"#"+nft.id,default="#15952"}' />
+
+
+            <include
+                layout="@layout/item_nft_creator"
+                app:user="@{user}"
+                android:visibility="@{preview?View.VISIBLE:View.GONE,default=gone}" />
 
 
         </LinearLayout>

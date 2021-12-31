@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/NFTCreate">
+    <fragment
+        android:id="@+id/NFTCreate"
+        android:name="com.near.labs.fragments.nft.creator.NFTCreate"
+        android:label="NFTCreate"
+        tools:layout="@layout/fragment_nft_create">
+
+        <action
+            android:id="@+id/action_NFTCreate_to_NFTPreview"
+            app:destination="@id/NFTPreview">
+            <argument
+                android:name="nft"
+                app:argType="com.near.labs.data.NFT" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/NFTPreview"
+        android:name="com.near.labs.fragments.nft.creator.NFTPreview"
+        android:label="NFTPreview"
+        tools:layout="@layout/fragment_nft_preview" />
+</navigation>

@@ -28,7 +28,8 @@ class NFTActivity : BaseActivity() {
                         host.navController.navigate(R.id.NFTHome)
                     }
                     R.id.add -> {
-                        true
+                        val intent = Intent(this, NFTCreatorActivity::class.java)
+                        startActivity(intent)
                     }
                     R.id.hisotry -> {
                         host.navController.navigate(R.id.NFTHistory)
