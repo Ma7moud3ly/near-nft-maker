@@ -44,15 +44,9 @@
 
         <ImageView
             android:id="@+id/header_exit"
-            style="@style/ripple"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            style="@style/button_close"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
-            android:background="@drawable/circle"
-            android:clickable="true"
-            android:padding="3dp"
-            android:src="@drawable/close"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/header_title"
             app:layout_constraintTop_toTopOf="parent" />
@@ -81,14 +75,14 @@
             android:layout_marginEnd="10dp"
             android:background="@drawable/oval"
             android:iconifiedByDefault="false"
-            app:queryHint="@string/search_hint"
             android:textSize="11sp"
             android:visibility="@{showSearch?View.VISIBLE:View.GONE,default=invisible}"
             app:iconifiedByDefault="false"
             app:layout_constraintEnd_toStartOf="@id/header_import"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/header_exit"
-            app:queryBackground="@null" />
+            app:queryBackground="@null"
+            app:queryHint="@string/search_hint" />
 
         <TextView
             android:id="@+id/header_import"

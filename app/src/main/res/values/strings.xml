@@ -58,5 +58,13 @@
     <string name="transaction_sent_to">Sent to</string>
     <string name="transaction_received_from">Received from</string>
 
+    <string name="settings_connected_wallet">Connected Wallet</string>
+    <string name="settings_profile_settings">Profile Settings</string>
+    <string name="settings_name">Name</string>
+    <string name="settings_email">Email Address</string>
+    <string name="settings_phone">Phone Number</string>
+    <string name="settings_security">Security</string>
+    <string name="settings_dialog_confirm">Ok</string>
+
 
 </resources>

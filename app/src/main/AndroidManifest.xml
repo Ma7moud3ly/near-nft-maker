@@ -15,18 +15,34 @@
             android:exported="true"
             android:theme="@style/Theme.Near.Hide.Status.Bar"
             android:windowSoftInputMode="adjustPan">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".activities.NFTActivity"
-            android:theme="@style/Theme.Near.Hide.Status.Bar"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@style/Theme.Near.Hide.Status.Bar">
 
         </activity>
+
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="true"
+            android:label=""
+            android:parentActivityName=".activities.NFTActivity"
+            android:theme="@style/Theme.Near.White.Status.Bar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.NFTActivity" />
+
+        </activity>
+
 
     </application>
 

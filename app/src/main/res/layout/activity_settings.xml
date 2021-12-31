@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/Theme.Near.White.Status.Bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <include
+                android:id="@+id/toolbar_layout"
+                layout="@layout/section_setting_appbar" />
+
+            <TextView
+                style="@style/tab_label"
+                android:text="@string/settings_connected_wallet" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/tab_button"
+                android:id="@+id/settings_wallet"
+                android:drawableStart="@drawable/user_icon"
+                android:drawableEnd="@drawable/arrow_forward"
+                android:text="jhon.near" />
+
+            <TextView
+                style="@style/tab_label"
+                android:text="@string/settings_profile_settings" />
+
+            <androidx.cardview.widget.CardView style="@style/tab_container">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        layout="@layout/item_settings_tab"
+                        app:text='@{"John Cena"}'
+                        android:id="@+id/settings_name"
+                        app:title="@{@string/settings_name}" />
+
+                    <include
+                        layout="@layout/item_settings_tab"
+                        app:text='@{"1235456826"}'
+                        android:id="@+id/settings_phone"
+                        app:title="@{@string/settings_phone}" />
+
+                    <include
+                        layout="@layout/item_settings_tab"
+                        app:text='@{"john@gmailcom"}'
+                        android:id="@+id/settings_email"
+                        app:title="@{@string/settings_email}" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                style="@style/tab_label"
+                android:text="@string/settings_profile_settings" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/tab_button"
+                android:id="@+id/settings_security"
+                android:drawableEnd="@drawable/arrow_forward"
+                android:text="@string/settings_security" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

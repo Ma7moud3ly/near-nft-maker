@@ -1,5 +1,6 @@
 package com.near.labs.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import com.near.labs.R
@@ -14,6 +15,10 @@ class NFTActivity : BaseActivity() {
         binding = ActivityNftBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.nftUser.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
 
         val host = supportFragmentManager.findFragmentById(R.id.nav_host_nft) as NavHostFragment
         binding.footer.bottomNavigation.setOnNavigationItemSelectedListener { item ->
@@ -23,7 +28,7 @@ class NFTActivity : BaseActivity() {
                         host.navController.navigate(R.id.NFTHome)
                     }
                     R.id.add -> {
-                         true
+                        true
                     }
                     R.id.hisotry -> {
                         host.navController.navigate(R.id.NFTHistory)
