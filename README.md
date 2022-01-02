@@ -17,23 +17,23 @@
 <div align="center">
 <br>
   <div>
-  <img src="screens/a1.jpg" alt="screenshot" width="200"/>
-  <img src="screens/a2.jpg" alt="screenshot" width="200"/>
-  <img src="screens/a3.jpg" alt="screenshot" width="200"/>
-  <img src="screens/a4.jpg" alt="screenshot" width="200"/>
+  <img src="screens/a1.jpg" alt="screenshot" width="150"/>&nbsp;&nbsp;&nbsp;
+  <img src="screens/a2.jpg" alt="screenshot" width="150"/>&nbsp;&nbsp;&nbsp;
+  <img src="screens/a3.jpg" alt="screenshot" width="150"/>&nbsp;&nbsp;&nbsp;
+  <img src="screens/a4.jpg" alt="screenshot" width="150"/>
 </div>
 <br>
 <div>
-  <img src="screens/b1.jpg" alt="screenshot" width="200"/>
-  <img src="screens/b2.jpg" alt="screenshot" width="200"/>
-  <img src="screens/b3.jpg" alt="screenshot" width="200"/>
-  <img src="screens/b4.jpg" alt="screenshot" width="200"/>
+  <img src="screens/b1.jpg" alt="screenshot" width="150"/>&nbsp;&nbsp;&nbsp;
+  <img src="screens/b2.jpg" alt="screenshot" width="150"/>&nbsp;&nbsp;&nbsp;
+  <img src="screens/b3.jpg" alt="screenshot" width="150"/>&nbsp;&nbsp;&nbsp;
+  <img src="screens/b4.jpg" alt="screenshot" width="150"/>&nbsp;&nbsp;&nbsp;
 </div>
 <div>
-  <img src="screens/c1.jpg" alt="screenshot" width="200"/>
-  <img src="screens/c2.jpg" alt="screenshot" width="200"/>
-  <img src="screens/c3.jpg" alt="screenshot" width="200"/>
-  <img src="screens/c4.jpg" alt="screenshot" width="200"/>
+  <img src="screens/c1.jpg" alt="screenshot" width="150"/>&nbsp;&nbsp;&nbsp;
+  <img src="screens/c2.jpg" alt="screenshot" width="150"/>&nbsp;&nbsp;&nbsp;
+  <img src="screens/c3.jpg" alt="screenshot" width="150"/>&nbsp;&nbsp;&nbsp;
+  <img src="screens/c4.jpg" alt="screenshot" width="150"/>
 </div>
 <br>
 <br>
