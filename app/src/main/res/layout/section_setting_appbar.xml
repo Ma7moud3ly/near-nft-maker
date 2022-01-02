@@ -14,8 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Settings"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textStyle="bold" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     </androidx.appcompat.widget.Toolbar>
 </com.google.android.material.appbar.AppBarLayout>

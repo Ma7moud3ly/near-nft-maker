@@ -19,6 +19,7 @@
 
         <TextView
             style="@style/label.title"
+            android:textStyle="normal"
             android:layout_gravity="start|center"
             android:text='@{title,default="title"}'
             android:textColor="@color/colorSecondary" />

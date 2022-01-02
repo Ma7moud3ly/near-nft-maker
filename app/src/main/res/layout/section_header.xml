@@ -35,8 +35,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text='@{title,default="Title"}'
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toBottomOf="@id/header_exit"
             app:layout_constraintEnd_toStartOf="@id/header_exit"
             app:layout_constraintStart_toStartOf="parent"
