@@ -1,6 +1,7 @@
 # NEAR NFT-Maker
 ##### Developer [@ma7moud3ly](https://github.com/ma7moud3ly)
 ##### Owner [@nearcomponents](https://github.com/nearcomponents)
+##### Design [@figma](https://www.figma.com/file/DAixS5x6Y0nxbrX2voAMH9/NEAR-Labs-App-) 
 ##### Download [app-release.apk](https://github.com/Ma7moud3ly/near-nft-maker/blob/main/app/release/app-release.apk)
 ### Technologies 
 - Kotlin
